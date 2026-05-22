@@ -1,0 +1,296 @@
+/* =============================================
+   Design System: Global CSS Variables
+   Theme: Light (White + Indigo) /
+          Dark  (Black + Soft Indigo)
+   Fonts: Inter + Satoshi
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── CSS Reset ─────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─── Light Theme Tokens ─────────────────────── */
+:root {
+  /* Fonts */
+  --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --sidebar-width: 256px;
+  --navbar-height: 64px;
+
+  /* ── LIGHT THEME ── */
+
+  /* Background Layers */
+  --bg-base: #F8F9FC;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --bg-sunken: #F1F3F9;
+  --bg-overlay: rgba(15, 15, 35, 0.45);
+
+  /* Text */
+  --text-primary: #0F1117;
+  --text-secondary: #3D4360;
+  --text-muted: #7B82A0;
+  --text-placeholder: #A8AEBE;
+  --text-on-primary: #FFFFFF;
+
+  /* Borders */
+  --border-subtle: #EEF0F8;
+  --border-default: #E2E5F0;
+  --border-strong: #C8CCE0;
+  --border-focus: #6366F1;
+
+  /* Primary — Indigo */
+  --color-primary: #6366F1;
+  --color-primary-hover: #4F52DB;
+  --color-primary-light: #EEF0FF;
+  --color-primary-border: #C7C9FB;
+  --color-primary-glow: rgba(99, 102, 241, 0.18);
+
+  /* Semantic */
+  --color-success: #10B981;
+  --color-success-light: #ECFDF5;
+  --color-success-border: #A7F3D0;
+
+  --color-danger: #EF4444;
+  --color-danger-hover: #DC2626;
+  --color-danger-light: #FEF2F2;
+  --color-danger-border: #FECACA;
+
+  --color-warning: #F59E0B;
+  --color-warning-light: #FFFBEB;
+  --color-warning-border: #FDE68A;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
+  --gradient-surface: linear-gradient(180deg, #FFFFFF 0%, #F8F9FC 100%);
+  --gradient-hero: linear-gradient(135deg, #EEF0FF 0%, #F8F9FC 50%, #EEF0FF 100%);
+  --gradient-text: linear-gradient(135deg, #6366F1 0%, #A78BFA 60%, #818CF8 100%);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 15, 35, 0.04);
+  --shadow-sm: 0 1px 4px rgba(15, 15, 35, 0.06), 0 1px 2px rgba(15, 15, 35, 0.04);
+  --shadow-card: 0 2px 8px rgba(15, 15, 35, 0.06), 0 1px 3px rgba(15, 15, 35, 0.04);
+  --shadow-md: 0 4px 16px rgba(15, 15, 35, 0.08), 0 2px 6px rgba(15, 15, 35, 0.05);
+  --shadow-lg: 0 8px 32px rgba(15, 15, 35, 0.10), 0 4px 12px rgba(15, 15, 35, 0.06);
+  --shadow-xl: 0 16px 48px rgba(15, 15, 35, 0.12), 0 8px 20px rgba(15, 15, 35, 0.07);
+  --shadow-2xl: 0 24px 64px rgba(15, 15, 35, 0.15), 0 12px 28px rgba(15, 15, 35, 0.09);
+
+  /* Glassmorphism (Navbar) */
+  --glass-bg: rgba(255, 255, 255, 0.80);
+  --glass-blur: blur(16px) saturate(180%);
+  --glass-border: rgba(226, 229, 240, 0.8);
+  --glass-shadow: 0 1px 3px rgba(15, 15, 35, 0.06);
+
+  /* Note accent colors */
+  --note-white: #FFFFFF;
+  --note-sky: #EFF6FF;
+  --note-mint: #F0FDF4;
+  --note-rose: #FFF1F2;
+  --note-amber: #FFFBEB;
+  --note-violet: #F5F3FF;
+  --note-slate: #F8FAFC;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Dark Theme Tokens ───────────────────────── */
+[data-theme="dark"] {
+  /* Background Layers */
+  --bg-base: #0A0A0F;
+  --bg-surface: #111118;
+  --bg-elevated: #18181F;
+  --bg-sunken: #08080D;
+  --bg-overlay: rgba(0, 0, 0, 0.65);
+
+  /* Text */
+  --text-primary: #F0F0FF;
+  --text-secondary: #9899BE;
+  --text-muted: #5C5D80;
+  --text-placeholder: #3D3E60;
+  --text-on-primary: #FFFFFF;
+
+  /* Borders */
+  --border-subtle: #1A1A28;
+  --border-default: #22223A;
+  --border-strong: #34345A;
+  --border-focus: #818CF8;
+
+  /* Primary — Soft Indigo (Dark) */
+  --color-primary: #818CF8;
+  --color-primary-hover: #929EFF;
+  --color-primary-light: rgba(99, 102, 241, 0.12);
+  --color-primary-border: rgba(99, 102, 241, 0.25);
+  --color-primary-glow: rgba(129, 140, 248, 0.20);
+
+  /* Semantic */
+  --color-success: #34D399;
+  --color-success-light: rgba(52, 211, 153, 0.10);
+  --color-success-border: rgba(52, 211, 153, 0.25);
+
+  --color-danger: #F87171;
+  --color-danger-hover: #FC8A8A;
+  --color-danger-light: rgba(248, 113, 113, 0.10);
+  --color-danger-border: rgba(248, 113, 113, 0.25);
+
+  --color-warning: #FCD34D;
+  --color-warning-light: rgba(252, 211, 77, 0.10);
+  --color-warning-border: rgba(252, 211, 77, 0.25);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
+  --gradient-surface: linear-gradient(180deg, #111118 0%, #0A0A0F 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, #0A0A0F 50%, rgba(99, 102, 241, 0.05) 100%);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.40), 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.40), 0 1px 3px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.50), 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.40);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.60), 0 8px 20px rgba(0, 0, 0, 0.45);
+  --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.65), 0 12px 28px rgba(0, 0, 0, 0.50);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(17, 17, 24, 0.85);
+  --glass-blur: blur(20px) saturate(150%);
+  --glass-border: rgba(34, 34, 58, 0.8);
+  --glass-shadow: 0 1px 3px rgba(0, 0, 0, 0.40);
+
+  /* Note accent colors (Dark) */
+  --note-white: #111118;
+  --note-sky: #0C1929;
+  --note-mint: #0C1F14;
+  --note-rose: #1F0C0F;
+  --note-amber: #1F180C;
+  --note-violet: #130C1F;
+  --note-slate: #0F1117;
+}
+
+/* ─── Base Styles ─────────────────────────────── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-slow),
+    color var(--transition-slow);
+}
+
+/* ─── Premium Scrollbar ───────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ─── Focus Ring ──────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Selection ───────────────────────────────── */
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* ─── Utility Classes ─────────────────────────── */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
